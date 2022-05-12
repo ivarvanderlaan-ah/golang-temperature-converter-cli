@@ -28,7 +28,7 @@ func main() {
 
 		fmt.Print("What is the current temperature in " + originUnit + " ? ")
 
-		fmt.Scanln(&originValue)
+		_, err = fmt.Scanln(&originValue)
 		if err != nil {
 			printError(errReadingInput)
 		}
